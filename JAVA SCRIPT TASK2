@@ -1,0 +1,17 @@
+function alphabetizeString(inputString) {
+    // Split the string into an array of characters
+    const charArray = inputString.split('');
+
+    // Sort the array in alphabetical order
+    const sortedArray = charArray.sort();
+
+    // Join the sorted array back into a string
+    const sortedString = sortedArray.join('');
+
+    return sortedString;
+}
+
+// Test the function with the example string
+const inputString = 'webmaster';
+const sortedResult = alphabetizeString(inputString);
+console.log(sortedResult); // Output: 'abeemrstw'

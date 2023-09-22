@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ethnus Layout</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="menu.html">MENU</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Content for each section goes here -->
+        <section id="home">
+            <h1>Welcome to Ethnus Layout</h1>
+            <p>This is the home section of our website.</p>
+        </section>
+
+        <section id="menu">
+            <h2>Menu</h2>
+            <p>Explore our delicious menu items.</p>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Learn about our story and mission.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Get in touch with us through various means.</p>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Footer content goes here -->
+    </footer>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MATERIAL CARDS</title>
+    <style>
+        /* Add CSS styles for better presentation */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        .material-card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+        }
+        
+        .material-card a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MATERIAL CARDS</h1>
+    </header>
+    
+    <main>
+        <div class="material-card">
+            <p>Cards for display in portfolio style material design by Google</p>
+            <a href="#">LINK</a>
+        </div>
+        
+        <div class="material-card">
+            <p>Cards for display in portfolio style material design by Google</p>
+            <a href="#">LINK</a>
+        </div>
+        
+        <div class="material-card">
+            <p>Cards for display in portfolio style material design by Google</p>
+            <a href="#">LINK</a>
+        </div>
+        
+        <div class="material-card">
+            <p>Cards for display in portfolio style material design by Google</p>
+            <a href="#">LINK</a>
+        </div>
+        
+        <div class="material-card">
+            <p>Cards for display in portfolio style material design by Google</p>
+            <a href="#">LINK</a>
+        </div>
+        
+        <div class="material-card">
+            <p>Cards for display in portfolio style material design by Google</p>
+            <a href="#">LINK</a>
+        </div>
+    </main>
+    
+    <footer>
+        <!-- Footer content goes here -->
+    </footer>
+</body>
+</html>

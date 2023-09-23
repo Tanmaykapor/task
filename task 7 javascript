@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animation Control</title>
+    <style>
+        /* Define CSS styles for the animated element */
+        #animatedBox {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            animation-name: move;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        /* Define the animation */
+        @keyframes move {
+            0% {left: 0;}
+            50% {left: 50%;}
+            100% {left: 0;}
+        }
+    </style>
+</head>
+<body>
+    <h2>Click the following buttons to handle animation</h2>
+    <button onclick="startAnimation()">Start</button>
+    <button onclick="stopAnimation()">Stop</button>
+    <div id="animatedBox"></div>
+
+    <script>
+        let animationInterval;
+
+        function startAnimation() {
+            const animatedBox = document.getElementById('animatedBox');
+            animatedBox.style.animationPlayState = 'running';
+
+            // Start the animation
+            animationInterval = setInterval(function() {
+                animatedBox.style.animationPlayState = 'running';
+            }, 2000);
+        }
+
+        function stopAnimation() {
+            const animatedBox = document.getElementById('animatedBox');
+            animatedBox.style.animationPlayState = 'paused';
+
+            // Stop the animation
+            clearInterval(animationInterval);
+        }
+    </script>
+</body>
+</html>

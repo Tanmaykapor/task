@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date and Time</title>
+</head>
+<body>
+    <h2>Date and Time</h2>
+
+    <p>Show Date:</p>
+    <p id="dateDisplay"></p>
+
+    <p>Show Time:</p>
+    <p id="timeDisplay"></p>
+
+    <script>
+        // Get the current date and time
+        const currentDate = new Date();
+
+        // Format the date as "7/March 2023"
+        const optionsDate = { day: 'numeric', month: 'long', year: 'numeric' };
+        const formattedDate = currentDate.toLocaleDateString('en-US', optionsDate);
+
+        // Format the time as "Tue Mar 07 2023 23:24:26 GMT-0530 (India Standard Time)"
+        const formattedTime = currentDate.toString();
+
+        // Display the formatted date and time
+        document.getElementById('dateDisplay').textContent = formattedDate;
+        document.getElementById('timeDisplay').textContent = formattedTime;
+    </script>
+</body>
+</html>

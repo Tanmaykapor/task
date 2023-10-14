@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Your Portfolio</title>
+</head>
+<body>
+
+  <div id="app"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+section {
+  padding: 20px;
+}
+document.addEventListener('DOMContentLoaded', function () {
+  const appContainer = document.getElementById('app');
+
+  // Header Component
+  const createHeader = () => {
+    const header = document.createElement('header');
+    header.innerHTML = `
+      <h1>Your Name</h1>
+      <p>Web Developer</p>
+    `;
+    appContainer.appendChild(header);
+  };
+
+  // Projects Component
+  const createProjects = () => {
+    const projectsSection = document.createElement('section');
+    projectsSection.innerHTML = `
+      <h2>Projects</h2>
+      <!-- Your project details go here -->
+    `;
+    appContainer.appendChild(projectsSection);
+  };
+
+  // Contact Component
+  const createContact = () => {
+    const contactSection = document.createElement('section');
+    contactSection.innerHTML = `
+      <h2>Contact</h2>
+      <!-- Your contact information goes here -->
+    `;
+    appContainer.appendChild(contactSection);
+  };
+
+  // Function to initialize the portfolio
+  const initPortfolio = () => {
+    createHeader();
+    createProjects();
+    createContact();
+  };
+
+  // Initialize the portfolio
+  initPortfolio();
+});

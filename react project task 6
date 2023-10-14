@@ -1,0 +1,38 @@
+import React, { useState } from 'react';
+
+const App = () => {
+  const [dob, setDob] = useState('');
+  const [age, setAge] = useState(null);
+
+  const calculateAge = () => {
+    const birthDate = new Date(dob);
+    const today = new Date();
+    const ageDiff = today.getFullYear() - birthDate.getFullYear();
+
+    // Adjust age if birthday hasn't occurred yet this year
+    if (
+      today.getMonth() < birthDate.getMonth() ||
+      (today.getMonth() === birthDate.getMonth() && today.getDate() < birthDate.getDate())
+    ) {
+      setAge(ageDiff - 1);
+    } else {
+      setAge(ageDiff);
+    }
+  };
+
+  return (
+    <div className="App">
+      <h2>Age Calculator</h2>
+      <label>
+        Enter your date of birth:
+        <input type="date" value={dob} onChange={(e) => setDob(e.target.value)} />
+      </label>
+      <button onClick={calculateAge}>Calculate Age</button>
+      {age !== null && (
+        <p>Your are {age} {age === 1 ? 'year' : 'years'} old</p>
+      )}
+    </div>
+  );
+};
+
+export default App;

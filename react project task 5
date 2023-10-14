@@ -1,0 +1,59 @@
+import React, { useState, useEffect } from 'react';
+
+const App = () => {
+  const [userData, setUserData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('https://dummyjson.com/users');
+        const data = await response.json();
+        setUserData(data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  return (
+    <div className="App">
+      <h2>User Records</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Sno</th>
+            <th>Profile Pic</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Gender</th>
+            <th>E-mail</th>
+            <th>Username</th>
+            <th>Domain</th>
+            <th>IP</th>
+            <th>University</th>
+          </tr>
+        </thead>
+        <tbody>
+          {userData.map((user, index) => (
+            <tr key={index}>
+              <td>{user.sno}</td>
+              <td>{user['Profile Pic']}</td>
+              <td>{user['First Name']}</td>
+              <td>{user['Last Name']}</td>
+              <td>{user.Gender}</td>
+              <td>{user['E-mail']}</td>
+              <td>{user.Username}</td>
+              <td>{user.Domain}</td>
+              <td>{user.IP}</td>
+              <td>{user.University}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
+
+export default App;

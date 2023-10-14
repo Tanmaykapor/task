@@ -1,0 +1,49 @@
+import React, { useState } from 'react';
+
+const ColorPicker = () => {
+  const [selectedColor, setSelectedColor] = useState(null);
+  const colors = ['red', 'blue', 'green', 'yellow', 'purple'];
+
+  const handleColorClick = (color) => {
+    setSelectedColor(color);
+  };
+
+  return (
+    <div>
+      <h2>Color Picker</h2>
+      <p>Pick a color</p>
+      <div style={{ display: 'flex' }}>
+        {colors.map((color, index) => (
+          <div
+            key={index}
+            style={{
+              backgroundColor: color,
+              width: '30px',
+              height: '30px',
+              margin: '5px',
+              cursor: 'pointer',
+            }}
+            onClick={() => handleColorClick(color)}
+          />
+        ))}
+      </div>
+      {selectedColor && (
+        <p>You picked: {selectedColor}</p>
+      )}
+    </div>
+  );
+};
+
+export default ColorPicker;
+import React from 'react';
+import ColorPicker from './ColorPicker';
+
+const App = () => {
+  return (
+    <div className="App">
+      <ColorPicker />
+    </div>
+  );
+};
+
+export default App;
